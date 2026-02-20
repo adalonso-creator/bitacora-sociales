@@ -1,0 +1,95 @@
+body{
+    font-family: Georgia, serif;
+  background-image: url("fondo-pergamino.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:0;
+}
+
+.titulo{
+  margin:70px 0;
+  font-size: 50px; 
+}
+
+.grid{
+  display:flex;
+  justify-content:center;
+  gap:5cm;
+  flex-wrap:wrap;
+}
+
+.card{
+  cursor:pointer;
+}
+
+/* cuadro 10x10 aprox */
+.cuadro{
+  width:10cm;
+  height:10cm;
+  overflow:hidden;
+  border-radius:12px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cuadro img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.3s;
+}
+
+.cuadro:hover img{
+  transform:scale(1.1);
+}
+
+/* visor pantalla completa */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.visor{
+  width:90%;
+  height:90%;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#imagenGrande{
+  max-width:100%;
+  max-height:100%;
+  transform-origin:center;
+}
+.cerrar{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+  user-select:none;
+}
+.visor{ position:relative; }
+#imagenGrande{
+  max-width:100%;
+  max-height:100%;
+  transform-origin:center;
+  cursor:grab;
+}
+.cuadro{
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
