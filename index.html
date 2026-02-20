@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bitácora de sociales</title>
+<link rel="icon" type="image/png" href="cuaderno.png">
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<h1 class="titulo">Bitácora de sociales</h1>
+
+<div class="grid">
+
+  <div class="card" onclick="abrirImagen('sylabus.png')">
+    <div class="cuadro">
+      <img src="sylabus.png">
+    </div>
+    <h2>Sylabus</h2>
+  </div>
+
+  <div class="card" onclick="abrirImagen('fundamentos.png')">
+    <div class="cuadro">
+      <img src="fundamentos.png">
+    </div>
+    <h2>Fundamentos de la economía</h2>
+  </div>
+
+  <div class="card" onclick="abrirImagen('sectores.png')">
+    <div class="cuadro">
+      <img src="sectores.png">
+    </div>
+    <h2>Sectores de la economía</h2>
+  </div>
+
+</div>
+
+<!-- visor -->
+<div class="overlay" id="overlay">
+  <div class="visor" onclick="event.stopPropagation()">
+    <span class="cerrar" onclick="cerrarImagen()">✕</span>
+    <img id="imagenGrande">
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
